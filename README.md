@@ -1,6 +1,7 @@
 # Rspec::Launchbox
 
-TODO: Write a gem description
+Bundle of RSpec DSL helpers, providing
+timeout matchers, service runners. Work in progress.
 
 ## Installation
 
@@ -20,7 +21,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+#spec/spec_helper.rb
+
+require 'rspec/launchbox'
+
+RSpec.configure do |config|
+#...
+  config.extend RSpec::InPresenceOf
+  config.include RSpec::Matchers::Timeout
+```
+
+Then in spec file:
+
+```ruby
+describe MyClass do
+  in_presence_of 'external_program' do
+    it 'should listen on port' do
+      #here goes expectation
+    end
+  end
+end
+```
+
+This snippet runs binary called external_program (should be in path, or pass absolute path),
+ and makes sure process started by that command is dead.
+
+ _TODO:_ One day there  will be optional parameters e.g. signal to send to process.
 
 ## Contributing
 
