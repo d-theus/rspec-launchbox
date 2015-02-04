@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Rspec::Launchbox::VERSION
   spec.authors       = ["d-theus"]
   spec.email         = ["slma0x02@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{RSpec DSL extension for effortless process control}
+  spec.description   = %q{Launchbox makes it easy to start or stop external service, manage timeouts.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+
+  spec.add_dependency 'rspec'
 end

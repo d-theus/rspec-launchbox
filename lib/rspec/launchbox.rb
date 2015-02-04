@@ -1,7 +1,9 @@
 require "rspec/launchbox/version"
+require 'timeout'
 
-module Rspec
+module RSpec
   module Launchbox
-    # Your code goes here...
   end
 end
+
+require 'rspec/launchbox/timeout_matchers.rb'
