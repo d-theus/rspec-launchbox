@@ -10,3 +10,5 @@ RSpec.configure do |config|
   config.extend RSpec::InPresenceOf
   config.include RSpec::Matchers::Timeout
 end
+
+include RSpec::DescribeExecutable
