@@ -1,5 +1,10 @@
 module RSpec
   module Matchers
+    # #persist matcher defined here
+    # @example
+    #     expect do
+    #       #routine
+    #     end.to persist.at_least(3) # or 3.seconds if you use ActiveSupport
     module Timeout
       def self.included(*args)
         RSpec::Matchers.define :persist do

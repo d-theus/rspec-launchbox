@@ -21,6 +21,8 @@ Or install it yourself as:
 
 ## Usage
 
+### in_presence_of
+
 ```ruby
 #spec/spec_helper.rb
 
@@ -30,6 +32,8 @@ RSpec.configure do |config|
 #...
   config.extend RSpec::InPresenceOf
   config.include RSpec::Matchers::Timeout
+end
+include RSpec::DescribeExecutable
 ```
 
 Then in spec file:
@@ -42,6 +46,24 @@ describe MyClass do
     end
   end
 end
+```
+
+### describe_executable
+
+```ruby
+describe_executable 'ls' do
+  its_stdout do
+    it { is_expected.to be_a String }
+  end
+end
+```
+
+### expect { }.to persist
+
+```ruby
+expect do
+  #routine
+end.to persist.at_least(3) # or 3.seconds if you use ActiveSupport
 ```
 
 This snippet runs binary called external_program (should be in path, or pass absolute path),
