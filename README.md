@@ -21,6 +21,8 @@ Or install it yourself as:
 
 ## Usage
 
+[Documentation](http://www.rubydoc.info/github/d-theus/rspec-launchbox/index)
+
 ### in_presence_of
 
 ```ruby

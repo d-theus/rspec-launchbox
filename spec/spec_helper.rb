@@ -7,8 +7,4 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
-  config.extend RSpec::InPresenceOf
-  config.include RSpec::Matchers::Timeout
 end
-
-include RSpec::DescribeExecutable
